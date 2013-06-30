@@ -22,7 +22,7 @@ class Email
     subject = hash["subject"]
     content = hash["content"]
     date = hash["date"]
-    downloaded_times = hash["downloaded_times"]
+    downloaded_times = hash["downloaded_times"].to_i
     email_id = hash["_id"]
     Email.new(from, receivers, subject, content, date, email_id, downloaded_times)
   end
