@@ -45,6 +45,11 @@ Biimailserver::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  resources :emails do
+    collection do
+      get :has_new_mail
+    end
+  end
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
