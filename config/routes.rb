@@ -48,6 +48,7 @@ Biimailserver::Application.routes.draw do
   resources :emails do
     collection do
       get :has_new_mail
+      get :new_mails
     end
   end
 

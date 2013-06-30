@@ -22,8 +22,6 @@ class Server
   end
 
   def fetch(receiver, email_id)
-    puts receiver
-    puts email_id.class
     email = $repository.for(:emails).find_by_id(email_id)
     $repository.for(:user_email_references).delete_reference(receiver, email_id)
     email.download!
